@@ -1,0 +1,92 @@
+﻿@using System.Globalization
+@using PagedList.Mvc
+@model PagedList.IPagedList<EAP_C1809L_DamKhoiNguyen.Models.Album>
+
+<h1></h1>
+
+<form action="/Albums/Index" method="get">
+    <input type="text" name="search" value="@Request["search"]">
+    <button type="submit">Search</button>
+
+    <label style="margin-left:1em;">Page Size:</label>
+    <select name="pageSize">
+        <option value="3" @(Request["pageSize"] == "3" ? "selected" : "")>3</option>
+        <option value="5" @(Request["pageSize"] == "5" ? "selected" : "")>5</option>
+        <option value="7" @(Request["pageSize"] == "7" ? "selected" : "")>7</option>
+        <option value="9" @(Request["pageSize"] == "9" ? "selected" : "")>9</option>
+        <option value="11" @(Request["pageSize"] == "11" ? "selected" : "")>11</option>
+    </select>
+    <input type="hidden" name="pageNumber" value="@(String.IsNullOrEmpty(Request["pageNumber"]) ? "1" : Request["pageNumber"])" />
+</form>
+
+<script>
+    document.querySelector('[name="pageSize"]').onchange = function () {
+        document.querySelector('form').submit();
+    }
+
+    document.querySelector('[name="locale"]').onchange = function () {
+        document.querySelector('form').submit();
+    }
+</script>
+
+<table class="table">
+    <tr>
+        <th>
+            GenreName
+        </th>
+        <th>
+            <a href="/Albums/Index?pageNumber=@(Request["pageNumber"]==null ? "1" : Request["pageNumber"])&pageSize=@(Request["pageSize"]==null ? "3" : Request["pageSize"])&sort=@(Request["sort"]=="asc" ? "desc" : "asc")&search=@Request["search"]&order=Title">Title</a>
+        </th>
+        <th>
+            ReleaseDate
+        </th>
+        <th>
+            Artist
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.GenreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AlbumId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AlbumId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AlbumId })
+            </td>
+        </tr>
+    }
+</table>
+
+Page @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(
+    Model,
+    pageNumber => Url.Action(
+         "Index",
+         new
+         {
+              pageNumber,
+              pageSize = Request["pageSize"],
+              search = Request["search"],
+              order = Request["order"],
+              sort = Request["sort"]
+         }
+    )
+)
