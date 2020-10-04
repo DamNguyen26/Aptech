@@ -1,0 +1,26 @@
+<fulfillmentToken fulfillmentType="buy" auth="user" xmlns="http://ns.adobe.com/adept">
+  <distributor>urn:uuid:5912a286-0752-4058-830e-0a95d23cb627</distributor>
+  <operatorURL>http://www.e-shabda.com:8081/fulfillment</operatorURL>
+  <transaction>1619594142</transaction>
+  <expiration>2018-05-10T08:29:49+05:30</expiration>
+  <resourceItemInfo>
+    <resource>urn:uuid:bf391b73-407f-4f58-b5e7-c3f7446d0566</resource>
+    <resourceItem>0</resourceItem>
+    <metadata>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Programming for the Web With PHP</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aptech</dc:creator>
+      <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Aptech</dc:publisher>
+      <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">application/pdf</dc:format>
+    </metadata>
+    <licenseToken>
+      <resource>urn:uuid:bf391b73-407f-4f58-b5e7-c3f7446d0566</resource>
+      <permissions>
+        <display/>
+        <excerpt/>
+        <print/>
+        <play/>
+      </permissions>
+    </licenseToken>
+  </resourceItemInfo>
+  <hmac>lg5a057rtqx8l4I7EV16TFGkSsc=</hmac>
+</fulfillmentToken>

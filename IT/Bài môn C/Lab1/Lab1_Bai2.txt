@@ -1,0 +1,5 @@
+BEGIN
+INPUT P, C, B
+AVG = (P + C + B) / 3
+OUPUT AVG
+END
