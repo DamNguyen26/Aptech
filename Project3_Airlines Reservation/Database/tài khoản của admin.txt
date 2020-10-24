@@ -1,0 +1,3 @@
+mail: admin
+pass: abc123
+sử dụng SQL server để tạo database
