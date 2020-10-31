@@ -4,7 +4,7 @@
 -Tạo trang admin và user
 -Connect local db nhớ comment code(dùng SQL Server)
 
-24/10/20
+	24/10/20
 1.Làm giao diện admin: Long
 2.Giao diện User: Nguyên
 User:
@@ -16,3 +16,5 @@ User:
   *Điều kiện đặt vé (tĩnh)	
 -Footer
 3.Dịch yêu cầu đề bài + làm Doc: Vũ (làm dần và cố gắng làm bằng tiếng anh nếu có thể)
+	
+	31/10/20
