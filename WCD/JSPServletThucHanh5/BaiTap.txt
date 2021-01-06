@@ -1,0 +1,4 @@
+Cho bảng T_Events(id varchar(20) primary key, content varchar(2000), start_time datetime, end_time datetime)
+Tạo Ứng dụng Web với các chức năng sau
+- View all events chưa expired, tức là thời gian hiện tại nằm trong khoảng start_time và end_time
+- thêm mới event

@@ -1,0 +1,3 @@
+Thực hành với
+1. form nhập thông tin , validate required, sau đó hiển thị thông tin
+2. form nhập thông tin, lưu thông tin vào cookies sau đó  h iển thị thông tin từ cookies

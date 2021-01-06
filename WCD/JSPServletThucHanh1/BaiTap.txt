@@ -1,0 +1,5 @@
+Các bạn thực hành 
+- Tạo trang nhập thông tin
+- Tạo trang hiển thị thông tin vừa nhập
+
+Dùng JSP, Servlet
