@@ -1,4 +1,4 @@
-﻿using AirlinesReservationSystem.Models;
+using AirlinesReservationSystem.Models;
 using AirlinesReservationSystem.Models.ars;
 using AirlinesReservationSystem.Models.arsadmin;
 using System;

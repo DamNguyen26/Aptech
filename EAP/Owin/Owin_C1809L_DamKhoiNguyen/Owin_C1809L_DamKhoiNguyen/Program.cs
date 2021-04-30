@@ -1,4 +1,4 @@
-﻿using Microsoft.Owin.Hosting;
+using Microsoft.Owin.Hosting;
 using Owin_C1809L_DamKhoiNguyen.Model;
 using System;
 using System.Collections.Generic;

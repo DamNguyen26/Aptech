@@ -1,4 +1,4 @@
-﻿using Owin;
+using Owin;
 using System.Web.Http;
 
 namespace Owin_C1809L_DamKhoiNguyen.Model
