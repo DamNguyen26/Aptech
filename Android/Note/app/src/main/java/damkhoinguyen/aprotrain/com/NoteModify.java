@@ -11,8 +11,8 @@ import java.util.Date;
 
 public class NoteModify extends Activity implements View.OnClickListener {
 
-    private EditText titleText;
     private EditText descText;
+    private EditText timeText;
     private Button btnUpdate, btnDelete;
 
     private long _id;
@@ -27,20 +27,20 @@ public class NoteModify extends Activity implements View.OnClickListener {
         dbManager = new DBManager(this);
         dbManager.open();
 
-        titleText = findViewById(R.id.titleEditText);
         descText = findViewById(R.id.descEditText);
+        timeText = findViewById(R.id.timeEditText);
 
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-        String name = intent.getStringExtra("title");
         String desc = intent.getStringExtra("desc");
+        String time = intent.getStringExtra("time");
 
         _id = Long.parseLong(id);
-        titleText.setText(name);
         descText.setText(desc);
+        timeText.setText(time);
         btnUpdate.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
     }
@@ -50,9 +50,9 @@ public class NoteModify extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btnUpdate:
                 Date date = java.util.Calendar.getInstance().getTime();
-                String title = titleText.getText().toString();
-                String desc = date.toString();
-                dbManager.update(_id,title,desc);
+                String desc = descText.getText().toString();
+                String time = date.toString();
+                dbManager.update(_id, desc, time);
                 this.returnHome();
                 break;
 

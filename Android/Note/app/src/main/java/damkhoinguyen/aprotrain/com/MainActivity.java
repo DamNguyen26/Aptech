@@ -46,17 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener((parent, view, position, viewid) -> {
             TextView idTextView = view.findViewById(R.id.id);
-            TextView titleTextView = view.findViewById(R.id.title);
             TextView descTextView = view.findViewById(R.id.desc);
+            TextView timeTextView = view.findViewById(R.id.time);
 
             String id = idTextView.getText().toString();
-            String title = titleTextView.getText().toString();
             String desc = descTextView.getText().toString();
+            String time = timeTextView.getText().toString();
 
             Intent modifyIntent = new Intent(getApplicationContext(), NoteModify.class);
-            modifyIntent.putExtra("title",title);
-            modifyIntent.putExtra("desc",desc);
             modifyIntent.putExtra("id",id);
+            modifyIntent.putExtra("desc",desc);
+            modifyIntent.putExtra("time",time);
             startActivity(modifyIntent);
         });
     }

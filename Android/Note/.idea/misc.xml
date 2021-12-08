@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/layout/activity_modify_notes.xml" value="0.3625" />
         <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/layout/add_note.xml" value="0.3625" />
         <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/layout/list_item.xml" value="0.28940217391304346" />
         <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/menu/menu.xml" value="0.3625" />
+        <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />
+        <entry key="..\:/Users/dammi/OneDrive/Desktop/Codes/Aptech/Android/Note/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21875" />
       </map>
     </option>
   </component>
